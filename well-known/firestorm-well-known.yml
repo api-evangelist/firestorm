@@ -1,0 +1,50 @@
+generated: '2026-08-01'
+method: probed
+source: live HTTPS probes of the Firestorm web host
+host: https://launchfirestorm.com
+note: >-
+  Every /.well-known/ path probed returned HTTP 404 with a plain "Not found" body
+  (the host does NOT answer 200 with an SPA shell for unknown /.well-known/ paths,
+  so these are true negatives, not catch-all false positives). No security.txt, no
+  OIDC/OAuth discovery, no api-catalog, no ai-plugin, and no A2A agent card is
+  published. No pointer of type WellKnown / SecurityTxt / APICatalog is wired into
+  apis.yml, because none of these documents exist.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /.well-known/agent-card.json
+  status: 404
+- path: /.well-known/agent.json
+  status: 404
+- path: /llms.txt
+  status: 404
+- path: /openapi.json
+  status: 404
+- path: /swagger.json
+  status: 404
+- path: /robots.txt
+  status: 200
+  note: present but not an API discovery document; not saved
+x-evidence:
+  fetched: '2026-08-01'
+  hosts_probed:
+  - launchfirestorm.com
+  subdomains_resolved: []
+  subdomains_probed:
+  - api.launchfirestorm.com
+  - docs.launchfirestorm.com
+  - developer.launchfirestorm.com
+  - app.launchfirestorm.com
+  - status.launchfirestorm.com
+  - trust.launchfirestorm.com
+  subdomain_result: NXDOMAIN for all of the above

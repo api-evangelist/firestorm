@@ -1,0 +1,40 @@
+generated: '2026-08-01'
+method: searched
+source: https://github.com/launchfirestorm
+note: >-
+  Firestorm publishes no API client SDK, because it publishes no API. The only
+  first-party open-source artifact found is an internal developer tool (a versioning
+  CLI) in the company GitHub org; it is not distributed through any package registry
+  (crates.io returns no matching crate) and it is not a client library for a Firestorm
+  service. For that reason NO `SDKs` pointer and NO `CLI` pointer is wired into
+  apis.yml — the ergonomics checks those types feed are about an API client surface
+  that does not exist here.
+registries_searched:
+- registry: npm
+  query: launchfirestorm
+  result: no first-party packages
+- registry: crates.io
+  query: firestorm bump
+  result: no matching crate
+- registry: pypi
+  result: no first-party packages
+- registry: github
+  org: launchfirestorm
+  result: 3 public repos (2 upstream forks, 1 first-party tool)
+packages:
+- language: rust
+  registry: github
+  name: bump
+  url: https://github.com/launchfirestorm/bump
+  description: Automatic un-opinionated versioning CLI (SemVer/CalVer) used in Firestorm CI/CD.
+  license: MIT
+  official: true
+  api_client: false
+  published_to_registry: false
+forks:
+- name: minizip
+  url: https://github.com/launchfirestorm/minizip
+  upstream_fork: true
+- name: cpprestsdk
+  url: https://github.com/launchfirestorm/cpprestsdk
+  upstream_fork: true
