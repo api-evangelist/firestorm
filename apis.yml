@@ -21,6 +21,18 @@ deliveryModel:
   - none
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://storage.googleapis.com/gpt-engineer-file-uploads/UD2JENFGrWTwK5Ak5U2HBxAemCb2/social-images/social-1765770122457-sharing%20image.png
 x-type: company
 x-source: harvest:secondary-market
