@@ -40,7 +40,7 @@ x-tier: profiled
 x-tier-reason: enrichment-pass-no-api-surface
 specificationVersion: '0.23'
 created: '2026-08-01'
-modified: '2026-08-01'
+modified: '2026-10-06'
 tags:
 - Company
 - Defense
@@ -58,6 +58,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- url: https://launchfirestorm.com/blog/
+  type: Blog
 - type: DomainSecurity
   url: security/firestorm-domain-security.yml
 - type: Website
