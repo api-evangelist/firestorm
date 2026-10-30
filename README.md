@@ -64,22 +64,82 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Firestorm (Firestorm Labs, Inc.) is a San Diego based defense technology company founded in 2022 by Daniel Magy, Chad McCoy, Ian Muceus and Adrien Lepleux. It builds expeditionary manufacturing systems and modular unmanned aerial systems: the **xCELL** containerized production unit uses HP Multi Jet Fusion additive manufacturing to 3D print industrial-grade PA-12 nylon composite airframes and spare parts at the tactical edge, feeding the **Tempest** modular fixed-wing UAS family and the **Squall** FPV drone. Firestorm holds a five-year, $100M U.S. Air Force IDIQ and closed an $82M Series B in April 2026 led by Washington Harbour Partners.
+Firestorm (Firestorm Labs, Inc.) is a San Diego based defense technology company founded in 2022 that builds expeditionary manufacturing systems and modular unmanned aerial systems. Its xCELL containerized production unit uses HP Multi Jet Fusion additive manufacturing to 3D print industrial-grade PA-12 nylon composite airframes and spare parts at the tactical edge, feeding modular UAS platforms including the Tempest fixed-wing family and the Squall FPV drone. The company holds a five-year, $100M U.S. Air Force IDIQ and closed an $82M Series B in April 2026 led by Washington Harbour Partners. Firestorm ships hardware, not software: as of this profiling pass it publishes no developer portal, no public API, and no machine-readable API contract.
 
-- Website: https://launchfirestorm.com/
-- GitHub: https://github.com/launchfirestorm
-- Careers: https://jobs.gem.com/firestorm
-- Private-market listing: https://forgeglobal.com/firestorm_stock/
+**Areas:** Company · Defense · Aerospace · Unmanned Aerial Systems · Drones · 3D Printing · Manufacturing · Hardware
 
-## API surface
+## Firestorm on APIs.io
 
-**None found.** Firestorm ships hardware. As of the 2026-08-01 enrichment pass it publishes no developer portal, API reference, public API, SDK, OpenAPI/AsyncAPI/GraphQL contract, MCP server, or A2A agent card. Contract discovery probed the web host root and the `api.` / `docs.` / `developer.` / `app.` / `status.` / `trust.` subdomains (all NXDOMAIN) for `/openapi.json`, `/swagger.json`, `/.well-known/*`, `/llms.txt`, and both agent-card paths — every one missed. The probe record is in `well-known/firestorm-well-known.yml`.
+Everything profiled for Firestorm is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/firestorm/](https://apis.io/providers/firestorm/)** — or go straight to one of the APIs or properties below.
 
-## Artifacts
+### Published properties
 
-| Path | What it is |
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Firestorm Domain Security](https://apis.io/security/firestorm/firestorm-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://launchfirestorm.com/)
+- [Blog](https://launchfirestorm.com/blog/)
+- [Privacy policy](https://launchfirestorm.com/Firestorm_Labs_Privacy_Policy.pdf)
+- [GitHub](https://github.com/launchfirestorm)
+
+## API Evangelist rating
+
+**Kin Score 7.7** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| `packages/firestorm-packages.yml` | Registry + GitHub org search. One first-party open-source tool (`bump`, a versioning CLI); no API client SDK. |
-| `well-known/firestorm-well-known.yml` | Every discovery path probed, with HTTP status. All 404 (true negatives — the host does not answer 200 for unknown paths). |
-| `security/firestorm-domain-security.yml` | Probed TLS 1.3, HSTS (1 year), SPF and DMARC present (`p=none`), no DNSSEC, no CAA. |
-| `llms/firestorm-llms.txt` | Generated llms.txt for the company (no provider-published one exists). |
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 10.5 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 9.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/firestorm/](https://apis.io/providers/firestorm/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Firestorm: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/firestorm/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
